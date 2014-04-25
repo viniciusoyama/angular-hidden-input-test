@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title>Angular Bug?</title>
+  <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  <style type="text/css">
+    span  {
+      display: block;
+      cursor: pointer;
+      padding: 5px;
+      width: 50px;
+      text-align: center;
+      background: red;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <form action="page2.html">
+    Select a number:
+    <span ng-click="selectedNumber=1">1</span>
+    <span ng-click="selectedNumber=2">2</span>
+    <span ng-click="selectedNumber=3">3</span>
+    <span ng-click="selectedNumber=4">4</span>
+    <span ng-click="selectedNumber=5">5</span>
+    <input type="text" name='field1' value="{{selectedNumber}}" />
+    <input type="hidden" name='field2' value="{{selectedNumber}}" />
+    <input type="hidden" name='field3' ng-value="selectedNumber" />
+    <input type='submit' value='next'>
+  </form>
+</body>
+</html>
