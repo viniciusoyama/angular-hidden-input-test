@@ -25,7 +25,7 @@
     <span ng-click="selectedNumber=4">4</span>
     <span ng-click="selectedNumber=5">5</span>
     <input type="text" name='field0' value="{{selectedNumber}}" />
-    <input type="text" name='field1' value="{{selectedNumber}}" />
+    <input type="text" name='field1' ng-value="{{selectedNumber}}" />
     <input type="hidden" name='field2' value="{{selectedNumber}}" />
     <input type="hidden" name='field3' ng-value="selectedNumber" />
     <input type='submit' value='next'>
